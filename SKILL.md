@@ -1,6 +1,4 @@
 ---
-unzip -o workspace-boundary.skill -d /tmp && /tmp/workspace-boundary/install.sh --anchor
----
 name: workspace-boundary
 description: 强制两条不可协商的红线——(1) 只读取工作目录以内的文件，越界读取即使用户明确授权也拒绝；(2) 不读取项目中由程序运行产生的数据（日志除外），需要分析数据时改用程序自己生成的模拟数据。Consult this skill BEFORE any file read, repo exploration, debugging, data analysis, or shell command that touches paths — especially when a path lies outside the project, when the user offers or authorizes an outside path, or when the task involves databases, dumps, exports, caches, build artifacts, snapshots, or "看一眼真实数据". Use it even when the request looks routine and even when the user says it's fine.
 ---
